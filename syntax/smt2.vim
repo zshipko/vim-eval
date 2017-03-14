@@ -15,7 +15,7 @@ setlocal iskeyword+==
 setlocal iskeyword+=>
 setlocal iskeyword+=:
 syn keyword basicLanguageKeywords assert check-sat get-proof get-model declare-sort define-sort declare-const declare-fun set-option forall :pattern exit define-fun get-value declare-datatypes
-syn keyword types Bool Int Real
+syn keyword types Bool Int Real String
 syn keyword bool_const false true
 syn keyword operators and or not => = iff distinct > >=
 syn match comments ";.*$"

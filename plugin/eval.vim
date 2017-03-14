@@ -1,5 +1,7 @@
 au BufNewFile,BufRead *.smt2 set filetype=smt2
-au BufNewFile,BufRead *.dl set filetype=datalog
+au Filetype python let g:eval_command = "python2.7 --"
+au Filetype ruby let g:eval_command = "ruby18 --"
+au Filetype ocaml let g:eval_command = "ocaml -stdin"
 
 if !exists("g:eval_command")
     let g:eval_command = "z3 -smt2 -in"
