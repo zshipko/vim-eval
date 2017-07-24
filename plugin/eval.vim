@@ -1,9 +1,8 @@
 au BufNewFile,BufRead *.smt2 set filetype=smt2
-au BufNewFile,BufRead *.ml let g:eval_command = "ocaml -stdin"
-
-if !exists("g:eval_command")
-    let g:eval_command = "echo No command set"
-endif
+au Filetype python let g:eval_command = "python --"
+au Filetype ruby let g:eval_command = "ruby --"
+au Filetype ocaml let g:eval_command = "ocaml -stdin"
+au Filetype smt2 let g:eval_command = "z3 -smt2 -in"
 
 function! Eval()
     let stdin = join(getline(0, '$'), "\n")
